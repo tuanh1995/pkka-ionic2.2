@@ -1,0 +1,48 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Products</ion-title>
+    </ion-navbar>
+    <ion-toolbar>
+        <ion-searchbar placeholder="Search (Product No./Name)" [(ngModel)]="searchInput"></ion-searchbar>
+        <ion-buttons end>
+            <button ion-button color="brand-primary" (click)="search()">
+                <ion-icon name="options"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <button ion-item (click)="view(item);" *ngFor="let item of products">
+            <ion-grid no-padding>
+                <ion-row>
+                    <ion-col>
+                        <h2 class="text-primary" text-wrap>{{ item.id }} - {{ item.name }}</h2>
+                    </ion-col>
+                    <ion-col>
+                        <h2 text-wrap text-right>{{item.price | currency : 'USD' : true : '1.2-2'}}</h2>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-6 col-sm-6>
+                        <h3 text-wrap icon-left>Group: {{ item.group }}</h3>
+                    </ion-col>
+                    <ion-col col-6 col-sm-6>
+                        <h3>Stock On Hand : <span class="text-primary">{{ item.stock_on_hand }}</span></h3>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12 col-sm-6>
+                        <h3>Available Stock: {{ item.avail_stock }}</h3>
+                    </ion-col>
+                    <ion-col col-12 col-sm-6>
+                        <h3>Available Date : {{ item.avail_date | date: 'dd/MM/yyyy' }}</h3>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </button>
+    </ion-list>
+</ion-content>

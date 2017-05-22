@@ -1,0 +1,60 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Promotions</ion-title>
+    </ion-navbar>
+    <ion-toolbar>
+        <ion-searchbar [(ngModel)]="searchInput" placeholder="Search (ID/Name)"></ion-searchbar>
+        <ion-buttons end>
+            <button ion-button color="brand-primary" (click)="search()">
+                <ion-icon name="options"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <button ion-item *ngFor="let item of promotions" (click)="view(item);">
+                <ion-grid no-padding>
+                    <ion-row>
+                        <ion-col col-9 col-sm-9>
+                            <h2 class="title" text-wrap>{{ item.id }} - {{ item.title }}</h2>
+                        </ion-col>
+                        <ion-col col-3 col-sm-3>
+                            <h3 text-right [ngStyle]="{ 'color' : item.status ? 'red' : '#9E9E9E' }">{{ item.status ? 'Active' : 'Deactive' }}</h3>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-6 col-sm-6>
+                            <h3 text-wrap> Type: {{ item.type }}</h3>
+                        </ion-col>
+                        <ion-col col-6 col-sm-6>
+                            <h3 text-wrap> Price Group : {{ item.price_group }}</h3>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-12 col-sm-6>
+                            <h3 text-wrap>Customer : {{ item.customer }}</h3></ion-col>
+                        <ion-col col-12 col-sm-6>
+                            <h3 text-wrap>Valid : {{ item.valid_from | date: 'dd/MM/yyyy' }} - {{ item.valid_to | date: 'dd/MM/yyyy' }}</h3></ion-col>
+                    </ion-row>
+                </ion-grid>
+                
+        </button>
+
+
+<!--
+
+
+        <button ion-item (click)="view(item);" *ngFor="let item of promotions | filterPromotion : searchInput">
+            <h2 class="title" text-wrap>{{ item.id }}</h2>
+            <h3 text-wrap icon-left>{{ item.title }}</h3>
+            <h3 text-wrap>Type: {{ item.type }} - Price Group : {{ item.price_group }}</h3>
+            <h3 text-wrap>Customer : {{ item.customer }}</h3>
+            <h3 text-wrap>Valid : {{ item.valid_from | date: 'dd/MM/yyyy' }} - {{ item.valid_to | date: 'dd/MM/yyyy' }}</h3>
+            <h3 item-right [ngStyle]="{ 'color' : item.status ? 'red' : '#9E9E9E' }">{{ item.status ? 'Active' : 'Deactive' }}</h3>
+        </button>-->
+    </ion-list>
+</ion-content>

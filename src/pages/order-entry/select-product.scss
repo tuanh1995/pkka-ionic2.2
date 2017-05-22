@@ -1,0 +1,43 @@
+page-select-product {
+	ion-content {
+		background-color: color($colors, brand-light, base) !important;
+		ion-item.item-input {
+			ion-label {
+				max-width: none;
+				min-width: 80%;
+				h2 {
+					color: color($colors, brand-primary, base) !important;
+				}
+			}
+			ion-input.quantity {
+				// border-left: 1px solid #c8c7cc;
+				// background-color: rgba(230, 61, 46, 0.1);
+				input[type="number"] {
+					// background-color: #f4f4f4;
+					// background-color: rgba(230, 61, 46, 0.1);
+					// font-size: 24px;
+				}
+			}
+		} 
+		.totalProduct,
+	    .totalQuantity {
+			font-weight: bold;
+	    }
+
+	    ion-item.item-detail {
+	    	// padding-left: 50px;
+	    }
+
+	 //    ion-item.product-detail {
+		// 	max-height: 0;
+		// 	overflow-y: hidden;
+		// 	transition-property: all;
+		// 	transition-duration: .5s;
+		// 	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+	 //    }
+
+	 //    .slide-down {
+	 //    	max-height: 500px; /* approximate max height */
+		// }
+	}
+}

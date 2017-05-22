@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons start>
+            <button ion-button clear (click)="dismiss();">Cancel</button>
+        </ion-buttons>
+        <ion-title>Add Address</ion-title>
+        <ion-buttons end>
+            <button ion-button clear (click)="save();">SAVE</button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-input type="text" placeholder="Name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-textarea fz-elastic placeholder="Address"></ion-textarea>
+        </ion-item>
+    </ion-list>
+</ion-content>

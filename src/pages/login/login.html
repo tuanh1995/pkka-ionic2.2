@@ -1,0 +1,24 @@
+<ion-content padding>
+    <div class="login-wrapper">
+        <div class="login-content">
+            <div class="text-center logo-container">
+                <img class="logo-login" src="/assets/images/pokka-logo-red.png" />
+            </div>
+            <div class="app-name">
+                <h3 text-center>Pokka Sales Application</h3>
+            </div>
+            <div padding-bottom>
+                <input type="text" class="username" placeholder="USERNAME"/>
+            </div>
+            <div padding-bottom>
+                <input type="password" class="password" placeholder="PASSWORD"/>
+            </div>
+            <div>
+                <button class="btn-login" (click)="openHome($event);">LOG IN</button>
+            </div>
+        </div>
+    </div>
+</ion-content>
+<ion-footer>
+    <div text-center><button ion-button clear color="brand-primary" icon-left (click)="openAnnouncement()"><ion-icon name="md-calendar"></ion-icon>Announcement</button></div>
+</ion-footer>

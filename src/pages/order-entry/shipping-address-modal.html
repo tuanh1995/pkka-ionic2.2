@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons start>
+            <button ion-button clear (click)="dismiss();">Cancel</button>
+        </ion-buttons>
+        <ion-title>Select Address</ion-title>
+        <ion-buttons end>
+            <button ion-button clear (click)="addAddress();">ADD</button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <ion-list-header>Official Address</ion-list-header>
+        <button ion-item (click)="selectAddress(1);">
+            <div item-right>
+                <ion-icon ios="ios-lock" md="md-lock"></ion-icon>
+            </div>
+            <h2>Head Office</h2>
+            <h3 text-wrap>30 Tai Seng Street #09-01 Singapore 534013</h3>
+        </button>
+        <button ion-item (click)="selectAddress(2);">
+            <div item-right>
+                <ion-icon ios="ios-lock" md="md-lock"></ion-icon>
+            </div>
+            <h2>Branch 1</h2>
+            <h3 text-wrap>32 Changi Rd, Singapore 534013</h3>
+        </button>
+        <button ion-item (click)="selectAddress(3);">
+            <div item-right>
+                <ion-icon ios="ios-lock" md="md-lock"></ion-icon>
+            </div>
+            <h2>Branch 2</h2>
+            <h3 text-wrap>50 Hougang Ave, Singapore 534013</h3>
+        </button>
+    </ion-list>
+    <ion-list>
+        <ion-list-header>Additional Address</ion-list-header>
+        <ion-item-sliding>
+            <button ion-item (click)="selectAddress(4);">
+                <h2>Bakery 1</h2>
+                <h3 text-wrap>145 Pulasan Rd, Singapore 534013</h3>
+            </button>
+            <ion-item-options side="right">
+                <button ion-button color="brand-highlight" (click)="editAddress(1);">
+                    <ion-icon ios="ios-create" md="md-create"></ion-icon>
+                    Edit
+                </button>
+                <button ion-button color="brand-negative">
+                    <ion-icon ios="ios-trash" md="md-trash"></ion-icon>
+                    Delete
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+</ion-content>

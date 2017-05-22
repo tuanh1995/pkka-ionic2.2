@@ -1,0 +1,22 @@
+page-review-order {
+	ion-content {
+		background-color: color($colors, brand-light, base) !important;
+		ion-item {
+			ion-label {
+				h2 {
+					color: color($colors, brand-primary, base) !important;
+				}
+			}
+		}
+		.totalProduct,
+	    .totalQuantity,
+	    .totalAmount,
+	    .totalGST,
+	    .totalAmountAndGST {
+			font-weight: bold;
+	    }
+	    .totalAmountAndGST {
+			font-size: 22px;
+	    }
+	}
+}

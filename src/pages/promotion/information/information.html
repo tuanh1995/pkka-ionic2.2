@@ -1,0 +1,36 @@
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label>Promotion No.</ion-label>
+            <ion-input type="text" text-right readonly value="{{ item.id }}"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Name</ion-label>
+            <ion-input type="text" text-right readonly value="{{ item.title }}"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Promotion Type</ion-label>
+            <ion-input type="text" text-right readonly value="{{ item.type }}"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Customer</ion-label>
+            <ion-input type="text" text-right readonly value="{{ item.customer }}"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Price Group</ion-label>
+            <ion-input type="text" text-right readonly value="{{ item.price_group }}"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Valid From</ion-label>
+            <ion-input type="text" text-right readonly value="{{ item.valid_from | date: 'dd/MM/yyyy' }}"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Valid To</ion-label>
+            <ion-input type="text" text-right readonly value="{{ item.valid_to | date: 'dd/MM/yyyy' }}"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Status</ion-label>
+            <ion-input type="text" text-right readonly value="{{ item.status ? 'Active' : 'Pending' }}"></ion-input>
+        </ion-item>
+    </ion-list>
+</ion-content>

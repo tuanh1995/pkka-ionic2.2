@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>New Order</ion-title>
+        
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <ion-list-header>Customer Info</ion-list-header>
+        <ion-item>
+            <ion-label>Customer Name</ion-label>
+            <ion-input text-right type="text" placeholder="BreadTalk"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Customer Code</ion-label>
+            <ion-input text-right type="text" placeholder="C000001241"></ion-input>
+        </ion-item>
+    </ion-list>
+    <div padding>
+        <button no-margin ion-button block color="brand-primary" (click)="searchCustomer($event);">SEARCH</button>
+        <button no-margin margin-top ion-button block outline color="brand-primary">Reset</button>
+    </div>
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+        <ion-title>Step 01/06</ion-title>
+    </ion-toolbar>
+</ion-footer>

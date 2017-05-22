@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-toolbar color="brand-primary">
+        <ion-buttons start>
+            <button ion-button clear (click)="dismiss();">Cancel</button>
+        </ion-buttons>
+        <ion-title>Edit Address</ion-title>
+        <ion-buttons end>
+            <button ion-button clear (click)="save();">SAVE</button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label>Name</ion-label>
+            <ion-input text-right type="text" value="Bakery 01" readonly></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Address</ion-label>
+            <ion-textarea fz-elastic text-right value="145 Pulasan Rd, Singapore 534013"></ion-textarea>
+        </ion-item>
+    </ion-list>
+</ion-content>

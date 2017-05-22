@@ -1,0 +1,114 @@
+<ion-header>
+    <ion-toolbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Customers</ion-title>
+    </ion-toolbar>
+    <ion-toolbar>
+        <ion-searchbar [(ngModel)]="searchInput" placeholder="Search (Code/Name)"></ion-searchbar>
+        <ion-buttons end>
+            <button ion-button color="brand-primary" (click)="openAdvanceSearch()">
+                <ion-icon name="options"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-item-group>
+        <ion-item-divider>B</ion-item-divider>
+        <button ion-item *ngFor="let item of itemsB" (click)="itemSelected(item)">
+            <h2 text-wrap>{{ item.code }} - {{ item.company_name }}</h2>
+            <ion-grid no-padding>
+                <ion-row>
+                    <ion-col>
+                        <h3 text-wrap>Contact Name: {{ item.contact_name }}</h3></ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12 col-sm-6>
+                        <h3 text-wrap>Email: {{item.email}}</h3></ion-col>
+                    <ion-col col-12 col-sm-6>
+                        <h3 text-wrap text->Phone: {{item.phone}}</h3></ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12 col-sm-6>
+                        <h3 text-wrap>Price Group: {{ item.price_group }}</h3></ion-col>
+                    <ion-col col-12 col-sm-6>
+                        <h3 text-wrap>Catalog: {{item.catalog}}</h3></ion-col>
+                </ion-row>
+            </ion-grid>
+        </button>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider>F</ion-item-divider>
+        <button ion-item *ngFor="let item of itemsF" (click)="itemSelected(item)">
+            <h2 text-wrap>{{ item.code }} - {{ item.company_name }}</h2>
+            <ion-grid no-padding>
+                <ion-row>
+                    <ion-col>
+                        <h3 text-wrap>Contact Name: {{ item.contact_name }}</h3></ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12 col-sm-6>
+                        <h3 text-wrap>Email: {{item.email}}</h3></ion-col>
+                    <ion-col col-12 col-sm-6>
+                        <h3 text-wrap>Phone: {{item.phone}}</h3></ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12 col-sm-6>
+                        <h3 text-wrap>Price Group: {{ item.price_group }}</h3></ion-col>
+                    <ion-col col-12 col-sm-6>
+                        <h3 text-wrap>Catalog: {{item.catalog}}</h3></ion-col>
+                </ion-row>
+            </ion-grid>
+        </button>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider>P</ion-item-divider>
+        <button ion-item *ngFor="let item of itemsP" (click)="itemSelected(item)">
+            <h2 text-wrap>{{ item.code }} - {{ item.company_name }}</h2>
+            <ion-grid no-padding>
+                <ion-row>
+                    <ion-col>
+                        <h3 text-wrap>Contact Name: {{ item.contact_name }}</h3></ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12 col-sm-6>
+                        <h3 text-wrap>Email: {{item.email}}</h3></ion-col>
+                    <ion-col col-12 col-sm-6>
+                        <h3 text-wrap>Phone: {{item.phone}}</h3></ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12 col-sm-6>
+                        <h3 text-wrap>Price Group: {{ item.price_group }}</h3></ion-col>
+                    <ion-col col-12 col-sm-6>
+                        <h3 text-wrap>Catalog: {{item.catalog}}</h3></ion-col>
+                </ion-row>
+            </ion-grid>
+        </button>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider>R</ion-item-divider>
+        <button ion-item *ngFor="let item of itemsR" (click)="itemSelected(item)">
+            <h2 text-wrap>{{ item.code }} - {{ item.company_name }}</h2>
+            <ion-grid no-padding>
+                <ion-row>
+                    <ion-col>
+                        <h3 text-wrap>Contact Name: {{ item.contact_name }}</h3></ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12 col-sm-6>
+                        <h3 text-wrap>Email: {{item.email}}</h3></ion-col>
+                    <ion-col col-12 col-sm-6>
+                        <h3 text-wrap>Phone: {{item.phone}}</h3></ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12 col-sm-6>
+                        <h3 text-wrap>Price Group: {{ item.price_group }}</h3></ion-col>
+                    <ion-col col-12 col-sm-6>
+                        <h3 text-wrap>Catalog: {{item.catalog}}</h3></ion-col>
+                </ion-row>
+            </ion-grid>
+        </button>
+    </ion-item-group>
+</ion-content>

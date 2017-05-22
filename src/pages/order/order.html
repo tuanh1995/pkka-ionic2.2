@@ -1,0 +1,62 @@
+<ion-header>
+    <ion-toolbar>
+        <button ion-button menuToggle icon-only>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Orders</ion-title>
+        <ion-buttons end>
+            <button ion-button color="brand-primary" icon-left (click)="addOrder();">ADD</button>
+        </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+        <ion-searchbar placeholder="Search (Order No./Customer)"></ion-searchbar>
+        <ion-buttons end>
+            <button ion-button color="brand-primary" (click)="search()">
+                <ion-icon name="options"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <button ion-item (click)="viewOrder(order);" *ngFor="let order of orders">
+        <ion-grid no-padding >
+            <ion-row>
+                <ion-col>
+                    <h2 class="text-primary" text-wrap>{{order.id}}</h2>
+                </ion-col>
+                <ion-col>
+                    <h2 text-wrap text-right>{{order.price | currency : 'USD' : true : '1.2-2'}}</h2>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <h3 text-wrap>Order Date: {{order.order_date | date: 'dd/MM/yyyy'}}</h3></ion-col>
+                <ion-col>
+                    <h3 text-wrap text-right class="text-primary">{{order.status}}</h3>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <h3 text-wrap>Customer: {{order.customer}}</h3>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <h3 text-wrap>Salesman: {{order.salesman}}</h3>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </button>
+</ion-content>
+    <!-- <ion-list>
+        <button ion-item (click)="viewOrder(order);" *ngFor="let order of orders">
+            <h2 text-wrap class="header_color">{{order.id}}</h2>
+            <h3 text-wrap icon-left>Order Date: {{order.order_date | date: 'dd/MM/yyyy'}}</h3>
+            <h3 text-wrap>Customer: {{order.customer}}</h3>
+            <h3>Salesman: {{order.salesman}}</h3>
+            <div item-right>
+            <h2 text-right>{{order.price | currency : 'USD' : true : '1.2-2'}}</h2>
+            <h3 class="text-primary" text-right>{{order.status}}</h3>
+            </div>
+        </button>
+    </ion-list> -->

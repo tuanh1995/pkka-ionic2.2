@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Enter Other Information</ion-title>
+        <ion-buttons end>
+            <button ion-button color="brand-primary" (click)="reviewOrder()">NEXT</button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <ion-list-header>Delivery</ion-list-header>
+        <ion-item>
+            <ion-label>Date</ion-label>
+            <ion-datetime displayFormat="DD/MM/YYYY" placeholder="dd/mm/yyyy"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label>Time (From)</ion-label>
+            <ion-datetime displayFormat="h:mm A" pickerFormat="hh mm A" placeholder="hh:mm AM/PM"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label>Time (To)</ion-label>
+            <ion-datetime displayFormat="h:mm A" pickerFormat="hh mm A" placeholder="hh:mm AM/PM"></ion-datetime>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-list-header color="light">Purchase Order</ion-list-header>
+        <ion-item>
+            <ion-label>PO No.</ion-label>
+            <ion-input text-right type="text" placeholder=""></ion-input>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-list-header color="light">Remarks</ion-list-header>
+        <ion-item>
+            <ion-textarea fz-elastic placeholder=""></ion-textarea>
+        </ion-item>
+    </ion-list>
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+        <ion-title>Step 05/06</ion-title>
+    </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,11 @@
+page-order-detail {
+	ion-content {
+		background-color: color($colors, brand-light, base) !important;
+		.totalAmountAndGSTLabel {
+			max-width: none;
+		}
+		.totalAmountAndGSTInput {
+			font-size: 22px;
+		}
+	}
+}

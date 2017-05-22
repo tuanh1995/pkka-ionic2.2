@@ -1,0 +1,199 @@
+<ion-header>
+    <ion-navbar>
+            <ion-title>Order Detail</ion-title>
+            <ion-buttons end>
+                <button ion-button color="brand-primary" (click)="editOrder($event);">EDIT</button>
+            </ion-buttons>
+        </ion-navbar>
+    <ion-toolbar>
+    <ion-segment [(ngModel)]="segment">
+        <ion-segment-button value="information">
+          Information
+        </ion-segment-button>
+        <ion-segment-button value="products">
+          Products
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+
+<div [ngSwitch]="segment">
+    <div *ngSwitchCase="'information'">
+    <ion-list>
+        <ion-list-header color="light">Order Information</ion-list-header>
+        <ion-item>
+            <ion-label>Order No.</ion-label>
+            <ion-input text-right type="text" readonly value="{{order.id}}"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Order Date</ion-label>
+            <ion-input text-right type="text" readonly value="{{order.order_date | date: 'dd/MM/yyyy' }}"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Salesman</ion-label>
+            <ion-input text-right type="text" readonly value="{{order.salesman}}"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Status</ion-label>
+            <ion-input text-right type="text" readonly value="Open"></ion-input>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-list-header color="light">Customer Information</ion-list-header>
+        <ion-item>
+            <ion-label>Company Name</ion-label>
+            <ion-input text-right type="text" readonly value="Bread Talk"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Contact Name</ion-label>
+            <ion-input text-right type="text" readonly value="{{order.customer}}"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Telephone</ion-label>
+            <ion-input text-right type="text" readonly value="(08) 123456789"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Customer Category</ion-label>
+            <ion-input text-right type="text" readonly value="GOLD"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Designation</ion-label>
+            <ion-input text-right type="text" readonly value="Purchaser"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Email</ion-label>
+            <ion-input text-right type="text" readonly value="wong@bradtalk.com.sg"></ion-input>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-list-header color="light">Address</ion-list-header>
+        <ion-item>
+            <ion-label>Billing</ion-label>
+            <ion-textarea text-right readonly value="30 Tai Seng Street #09-01 Singapore 534013"></ion-textarea>
+        </ion-item>
+        <ion-item>
+            <ion-label>Shipping</ion-label>
+            <ion-textarea text-right readonly  value="30 Tai Seng Street #09-01 Singapore 534013"></ion-textarea>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-list-header color="light">PO No.</ion-list-header>
+        <ion-item>
+            <ion-label>PO_ABC</ion-label>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-list-header color="light">Remarks</ion-list-header>
+        <ion-item>
+            <ion-textarea text-left value="Please process ASAP and delivery at the right date time" readonly></ion-textarea>
+        </ion-item>
+    </ion-list>
+    </div>
+
+    <div *ngSwitchCase="'products'" class="product">
+        <ion-list>
+            <ion-list-header>Summary</ion-list-header>
+            <ion-item>
+                <ion-label >Total Products</ion-label>
+                <ion-input class="text-bold" text-right type="text" readonly value="2"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label >Total Quantity</ion-label>
+                <ion-input class="text-bold" text-right type="text" readonly value="130"></ion-input>
+            </ion-item>
+        </ion-list>
+        <ion-list>
+            <ion-list-header>Product List</ion-list-header>
+            <ion-item>
+                <h2 text-wrap class="text-primary">P0001 - Jasmine Green Tea 1.5L</h2>
+                <h3 text-wrap>UOM: 150ml</h3>
+                <h3 text-wrap>Promo. Mechanics: Lower price due to happy day</h3>
+                <ion-row>
+                    <ion-col col-8 no-padding padding-right>
+                        20 x $1.00 <del>($1.50)</del>
+                    </ion-col>
+                    <ion-col col-4 no-padding padding-left text-right>
+                        = $20.00
+                    </ion-col>
+                </ion-row>
+            </ion-item>
+            <ion-item>
+                <h2 text-wrap class="text-primary">P0002 - Ice Fruit Tea 300ML</h2>
+                <h3 text-wrap>UOM: 6Sx300ml</h3>
+                <h3>Promo. Mechanics:</h3>
+                <ion-row>
+                    <ion-col col-8 no-padding padding-right>
+                        100 x $3.00 <del>($1.50)</del>
+                    </ion-col>
+                    <ion-col col-4 no-padding padding-left text-right>
+                        = $300.00
+                    </ion-col>
+                </ion-row>
+            </ion-item>
+            <ion-item>
+                <h2 text-wrap class="text-primary">P0003 - Jasmine Fruit Tea 300ML</h2>
+                <h3 text-wrap>UOM: 6Sx300ml</h3>
+                <h3>Promo. Mechanics:</h3>
+                <ion-row>
+                    <ion-col col-8 no-padding padding-right>
+                        100 x $3.00 <del>($1.50)</del>
+                    </ion-col>
+                    <ion-col col-4 no-padding padding-left text-right>
+                        = $300.00
+                    </ion-col>
+                </ion-row>
+            </ion-item>
+        </ion-list>
+        <ion-list >
+            <ion-item>
+                <ion-label>Total Amount</ion-label>
+                <ion-input text-right type="text" readonly value="$620.00" class="text-bold"></ion-input><br>
+            </ion-item>
+            <ion-item>
+                <ion-label>GST 7%</ion-label>
+                <ion-input text-right type="text" readonly value="$43.00" class="text-bold"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label class="totalAmountAndGSTLabel" text-wrap>Total Amount Inclusive of GST</ion-label>
+                <ion-input class="text-bold totalAmountAndGSTInput" text-right type="text" readonly value="$663.00"></ion-input>
+            </ion-item>
+        </ion-list>
+
+        <!-- <ion-list>
+            <ion-item>
+                <ion-label class="bold">Total Products</ion-label>
+                <ion-input class="bold" text-right type="text" readonly value="2" ></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label class="bold">Total Quantity</ion-label>
+                <ion-input class="bold" text-right type="text" readonly value="130"></ion-input>
+            </ion-item>
+        </ion-list> -->
+        <!-- <ion-card>
+            <ion-item no-lines>
+                <ion-label >Total Amount</ion-label>
+                <ion-input text-right type="text" readonly value="$80.00"></ion-input>
+            </ion-item>
+            <ion-item no-lines>
+                <ion-label>GST 7%</ion-label>
+                <ion-input text-right type="text" readonly value="$5.60"></ion-input>
+            </ion-item>
+            <ion-item no-lines>
+                <ion-label >Total Amount Inclusive of GST</ion-label>
+                <ion-input text-right type="text" readonly value="$85.60"></ion-input>
+            </ion-item>
+        </ion-card> -->
+        <!-- <ion-card>
+            <ion-item>
+                <ion-label class="bold">Total Products</ion-label>
+                <ion-input class="bold" text-right type="text" readonly value="2"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label class="bold">Total Quantity</ion-label>
+                <ion-input class="bold" text-right type="text" readonly value="130"></ion-input>
+            </ion-item>
+        </ion-card> -->
+    </div>
+</div>
+</ion-content>

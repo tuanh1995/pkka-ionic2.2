@@ -1,0 +1,57 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <div text-center padding-left>
+                <span> Filter Products </span>
+            </div>
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button color="brand-primary" (click)="dismiss()">Close</button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label>Product Group</ion-label>
+            <ion-select text-right>
+                <ion-option value="Gold" selected="true">All</ion-option>
+                <ion-option value="Pokka">Pokka</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label>Produtc Category</ion-label>
+            <ion-select text-right>
+                <ion-option value="All" selected="true">All</ion-option>
+                <ion-option value="tea">Tea</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label>Produtc Sub-Category</ion-label>
+            <ion-select text-right>
+                <ion-option value="All" selected="true">All</ion-option>
+                <ion-option value="tea">Green Tea</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label>Pack Type/UOM</ion-label>
+            <ion-select text-right>
+                <ion-option value="All" selected="true">All</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label>Product No./Name</ion-label>
+            <ion-input text-right type="text" placeholder="Product No./Name"></ion-input>
+        </ion-item>
+    </ion-list>
+</ion-content>
+<ion-footer>
+    <div padding-left padding-right>
+        <p>
+            <button ion-button color="brand-negative" block (click)="dismiss()">Filter</button>
+        </p>
+        <p>
+            <button ion-button block outline color="brand-primary">Clear</button>
+        </p>
+    </div>
+</ion-footer>

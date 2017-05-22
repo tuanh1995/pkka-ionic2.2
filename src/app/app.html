@@ -1,0 +1,44 @@
+<ion-menu [content]="content">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>
+                <div class="logo-menu">
+                    <img src="/assets/images/pokka-logo-red.png" />
+                </div>
+            </ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <button menuClose ion-item (click)="openPage('CustomerList');">
+                <ion-icon item-left ios="ios-people" md="md-people"></ion-icon>Customers
+            </button>
+            <button menuClose ion-item (click)="openPage('Product');">
+                <ion-icon item-left ios="ios-pizza" md="md-pizza"></ion-icon>Products
+            </button>
+            <button menuClose ion-item (click)="openPage('Order');">
+                <ion-icon item-left ios="ios-basket" md="md-basket"></ion-icon>Orders
+            </button>
+            <button menuClose ion-item (click)="openPage('Promotion');">
+                <ion-icon item-left ios="ios-star" md="md-star"></ion-icon>Promotions
+            </button>
+        </ion-list>
+        <div padding-left padding-right >
+            <button ion-button block menuClose icon-left color="brand-primary" (click)="openPage('AddOrder');">
+                <ion-icon ios="ios-add" md="md-add"></ion-icon>ADD ORDER
+            </button>
+        </div>
+    </ion-content>
+    <ion-footer>
+        <ion-list no-margin>
+            <button menuClose ion-item (click)="openPage('MyAccount');">
+                <ion-icon item-left ios="ios-person" md="md-person"></ion-icon>My Account
+            </button>
+            <button menuClose ion-item (click)="logout();">
+                <ion-icon item-left ios="ios-exit" md="md-exit"></ion-icon>Log Out
+            </button>
+        </ion-list>
+    </ion-footer>
+</ion-menu>
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

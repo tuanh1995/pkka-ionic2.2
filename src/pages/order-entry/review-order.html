@@ -1,0 +1,164 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Review Order</ion-title>
+        <ion-buttons end>
+            <!-- <button ion-button color="brand-primary" (click)="otherInformation();">Next</button> -->
+            <!-- <ion-icon name="create"></ion-icon> -->
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content color="light">
+    <ion-list>
+        <ion-list-header color="light">Customer Information</ion-list-header>
+        <ion-item>
+            <ion-label>Company Name</ion-label>
+            <ion-input text-right type="text" readonly value="BreadTalk"></ion-input>
+        </ion-item>
+        <!-- <ion-item>
+            <ion-label>Custom Category</ion-label>
+            <ion-input text-right type="text" readonly value="Gold"></ion-input>
+        </ion-item> -->
+        <ion-item>
+            <ion-label>Contact Name</ion-label>
+            <ion-input text-right type="text" readonly value="Alan  Wong"></ion-input>
+        </ion-item>
+        <!-- <ion-item>
+            <ion-label>Designation</ion-label>
+            <ion-input text-right type="text" readonly value="Purchaser"></ion-input>
+        </ion-item> -->
+        <ion-item>
+            <ion-label>Telephone</ion-label>
+            <ion-input text-right type="text" readonly value="(65) 6285-6116"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Email</ion-label>
+            <ion-input text-right type="text" readonly value="alan.wong@breadtalk.com.sg"></ion-input>
+        </ion-item>
+    </ion-list>
+<!--     <ion-list>
+        <ion-list-header color="light">Credit Information</ion-list-header>
+        <ion-item>
+            <ion-label>Credit Limit</ion-label>
+            <ion-input text-right type="text" readonly value="$10,000.00"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Available Credit</ion-label>
+            <ion-input text-right type="text" readonly value="$8,000.00"></ion-input>
+        </ion-item>
+    </ion-list> -->
+    <ion-list>
+        <ion-list-header color="light">Address</ion-list-header>
+        <ion-item>
+            <ion-label>Billing</ion-label>
+            <ion-textarea fz-elastic text-right text-wrap readonly value="30 Tai Seng Street #09-01 Singapore 534013" readonly></ion-textarea>
+        </ion-item>
+        <ion-item>
+            <ion-label>Shipping</ion-label>
+            <ion-textarea fz-elastic text-right text-wrap readonly value="30 Tai Seng Street #09-01 Singapore 534013" readonly></ion-textarea>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-list-header color="light">Delivery</ion-list-header>
+        <ion-item>
+            <ion-label>Date</ion-label>
+            <ion-input text-right type="text" readonly value="14/03/2017"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Time</ion-label>
+            <ion-input text-right type="text" readonly value="08:00 AM - 10:00 AM"></ion-input>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-list-header color="light">Purchase Order</ion-list-header>
+        <ion-item>
+            <ion-label>PO No.</ion-label>
+            <ion-input text-right type="text" readonly value="PO_ABC"></ion-input>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-list-header color="light">Remarks</ion-list-header>
+        <ion-item>
+            <ion-textarea fz-elastic text-wrap readonly value="Please process ASAP and delivery at the right date time" readonly></ion-textarea>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-list-header color="light">Summary</ion-list-header>
+        <ion-item>
+            <ion-label>Total Products</ion-label>
+            <ion-input class="totalProduct" text-right type="text" readonly value="2"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Total Quantity</ion-label>
+            <ion-input class="totalQuantity" text-right type="text" readonly value="130"></ion-input>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-list-header color="light">Product List</ion-list-header>
+        <ion-item>
+            <h2 text-wrap class="color_header">P0001 - Jasmine Green Tea 1.5L</h2>
+            <h3 text-wrap>UOM: 150ml</h3>
+            <h3 text-wrap>Promo. Mechanics: Lower price due to happy day</h3>
+            <ion-row>
+                <ion-col col-8 no-padding padding-right>
+                    20 x $1.00
+                    <del>($1.50)</del>
+                </ion-col>
+                <ion-col col-4 no-padding padding-left text-right>
+                    = $20.00
+                </ion-col>
+            </ion-row>
+        </ion-item>
+        <ion-item>
+            <h2 text-wrap class="color_header">P0002 - Ice Fruit Tea 300ML</h2>
+            <h3 text-wrap>UOM: 6Sx300ml</h3>
+            <h3>Promo. Mechanics:</h3>
+            <ion-row>
+                <ion-col col-8 no-padding padding-right>
+                    100 x $3.00
+                    <del>($1.50)</del>
+                </ion-col>
+                <ion-col col-4 no-padding padding-left text-right>
+                    = $300.00
+                </ion-col>
+            </ion-row>
+        </ion-item>
+        <ion-item>
+            <h2 text-wrap class="color_header">P0002 - Ice Fruit Tea 300ML</h2>
+            <h3 text-wrap>UOM: 6Sx300ml</h3>
+            <h3>Promo. Mechanics:</h3>
+            <ion-row>
+                <ion-col col-8 no-padding padding-right>
+                    100 x $3.00
+                    <del>($1.50)</del>
+                </ion-col>
+                <ion-col col-4 no-padding padding-left text-right>
+                    = $300.00
+                </ion-col>
+            </ion-row>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-item>
+            <ion-label>Total Amount</ion-label>
+            <ion-input class="totalAmount" text-right type="text" readonly value="$640.00"></ion-input>
+            <br>
+        </ion-item>
+        <ion-item>
+            <ion-label>GST 7%</ion-label>
+            <ion-input class="totalGST" text-right type="text" readonly value="$44.80"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Total Amount Inclusive of GST</ion-label>
+            <ion-input class="totalAmountAndGST" text-right type="text" readonly value="$684.80"></ion-input>
+        </ion-item>
+    </ion-list>
+    <div padding>
+        <button ion-button no-margin margin-bottom color="brand-negative" block (click)="completeOrder()">SAVE</button>
+        <button ion-button no-margin color="danger" outline block (click)="completeOrder()">Submit</button>
+    </div>
+</ion-content>
+<ion-footer color="light">
+    <ion-toolbar>
+        <ion-title>Step 06/06</ion-title>
+    </ion-toolbar>
+</ion-footer>

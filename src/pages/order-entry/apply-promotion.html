@@ -1,0 +1,83 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Apply Promotion</ion-title>
+        <ion-buttons end>
+            <button ion-button color="brand-primary" (click)="otherInformation();">NEXT</button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <ion-list-header>Summary</ion-list-header>
+        <ion-item>
+            <ion-label>Total Products</ion-label>
+            <ion-input text-right type="text" class="totalProduct" readonly value="3"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Total Quantity</ion-label>
+            <ion-input text-right type="text" class="totalQuantity" readonly value="220"></ion-input>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-list-header>Product List</ion-list-header>
+        <ion-item>
+            <h2 text-wrap>P0001 - Jasmine Green Tea 1.5L</h2>
+            <h3 text-wrap>UOM: 150ml</h3>
+            <h3 text-wrap>Promo. Mechanics: Lower price due to happy day</h3>
+            <ion-row>
+                <ion-col col-8 no-padding padding-right>
+                    20 x $1.00 <del>($1.50)</del>
+                </ion-col>
+                <ion-col col-4 no-padding padding-left text-right>
+                    = $20.00
+                </ion-col>
+            </ion-row>
+        </ion-item>
+        <ion-item>
+            <h2 text-wrap>P0002 - Ice Fruit Tea 300ML</h2>
+            <h3 text-wrap>UOM: 6Sx300ml</h3>
+            <h3>Promo. Mechanics:</h3>
+            <ion-row>
+                <ion-col col-8 no-padding padding-right>
+                    100 x $3.00 <del>($1.50)</del>
+                </ion-col>
+                <ion-col col-4 no-padding padding-left text-right>
+                    = $300.00
+                </ion-col>
+            </ion-row>
+        </ion-item>
+        <ion-item>
+            <h2 text-wrap>P0002 - Ice Fruit Tea 300ML</h2>
+            <h3 text-wrap>UOM: 6Sx300ml</h3>
+            <h3>Promo. Mechanics:</h3>
+            <ion-row>
+                <ion-col col-8 no-padding padding-right>
+                    100 x $3.00 <del>($1.50)</del>
+                </ion-col>
+                <ion-col col-4 no-padding padding-left text-right>
+                    = $300.00
+                </ion-col>
+            </ion-row>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-item>
+            <ion-label>Total Amount</ion-label>
+            <ion-input class="totalAmount" text-right type="text" readonly value="$640.00"></ion-input>
+            <br>
+        </ion-item>
+        <ion-item>
+            <ion-label>GST (7%)</ion-label>
+            <ion-input class="totalGST" text-right type="text" readonly value="+ $44.80"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Total Amount Inclusive of GST</ion-label>
+            <ion-input class="totalAmountAndGST" text-right type="text" readonly value="$684.80"></ion-input>
+        </ion-item>
+    </ion-list>
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+        <ion-title>Step 04/06</ion-title>
+    </ion-toolbar>
+</ion-footer>

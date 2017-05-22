@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Select Customer</ion-title>
+        <ion-buttons end>
+            <button ion-button clear (click)="dismiss();">Close</button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-item-group>
+        <ion-item-divider>B</ion-item-divider>
+        <button ion-item (click)="selectCustomer(1);">
+            <h2 text-wrap>ABC0213299 - Basilico</h2>
+            <h3 text-wrap icon-left>Chris Kim</h3>
+            <h3 text-wrap>45 Tai Seng Street #09-01</h3>
+            <h3>(65)-6285-2321</h3>
+        </button>
+        <button ion-item (click)="selectCustomer(1);">
+            <h2 text-wrap>ABC0213232 - BreadTalk</h2>
+            <h3 text-wrap icon-left>Alan Wong</h3>
+            <h3 text-wrap>30 Tai Seng Street #09-01</h3>
+            <h3>(65)6285-6116</h3>
+        </button>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider>F</ion-item-divider>
+        <button ion-item (click)="selectCustomer(1);">
+            <h2 text-wrap>ABC0213266 - Din Tai Fung</h2>
+            <h3 text-wrap icon-left>Michel Tan</h3>
+            <h3 text-wrap>1425 Tai Seng Street #09-01</h3>
+            <h3> (65)6285-3339</h3>
+        </button>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider>P</ion-item-divider>
+        <button ion-item (click)="selectCustomer(1);">
+            <h2 text-wrap>ABC0213222 - Ramen Play</h2>
+            <h3 text-wrap icon-left>Denis Ng</h3>
+            <h3 text-wrap>90 Tai Seng Street #09-01</h3>
+            <h3>(65)6285-7231</h3>
+        </button>
+    </ion-item-group>
+</ion-content>

@@ -1,0 +1,9 @@
+page-announcement-modal {
+	ion-content {
+		background-color: color($colors, brand-light, base) !important;
+		.has-date {
+			border-left: solid 2px color($colors, brand-primary, base);
+			min-height: 40px;
+		}
+	}
+}

@@ -1,0 +1,57 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <div text-center padding-left>
+                <span> Advanced Search </span>
+            </div>
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button color="brand-primary" (click)="dismiss()">Close</button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label>Order No.</ion-label>
+            <ion-input text-right type="text" placeholder=""></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Order Date (From)</ion-label>
+            <ion-datetime displayFormat="MMM DD YYYY" placeholder="" ></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label>Order Date (To)</ion-label>
+            <ion-datetime displayFormat="MMM DD YYYY" placeholder="" ></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label>Customer</ion-label>
+            <ion-input text-right type="text" placeholder=""></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Salesman</ion-label>
+            <ion-input text-right type="text" placeholder=""></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Total Amount</ion-label>
+            <ion-input text-right type="text" placeholder=""></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Status</ion-label>
+            <ion-select  text-right><!-- [(ngModel)]="product_uom" -->
+                <ion-option value="Active" selected="true">Active</ion-option>
+                <ion-option value="Pending">Pending</ion-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+</ion-content>
+<ion-footer>
+    <div padding-left padding-right>
+        <p>
+            <button ion-button color="brand-primary" block (click)="dismiss()">Search</button>
+        </p>
+        <p>
+            <button ion-button color="brand-primary" outline block (click)="dismiss()">Clear</button>
+        </p>
+    </div>
+</ion-footer>

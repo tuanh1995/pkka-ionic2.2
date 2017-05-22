@@ -1,0 +1,100 @@
+<ion-header>
+    <ion-navbar no-border-bottom>
+        <ion-title>
+            Customer Detail
+        </ion-title>
+    </ion-navbar>
+    <ion-toolbar no-border-top>
+        <ion-segment [(ngModel)]="detail" color="brand-negative">
+            <ion-segment-button value="information">
+                Information
+            </ion-segment-button>
+            <ion-segment-button value="order">
+                Order
+            </ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div [ngSwitch]="detail">
+        <ion-list *ngSwitchCase="'information'">
+            <ion-item>
+                <ion-label>Customer ID</ion-label>
+                <ion-input text-right type="text" readonly value="ABC2132132"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>First Name</ion-label>
+                <ion-input text-right type="text" readonly value="Alan"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Last name</ion-label>
+                <ion-input text-right type="text" readonly value="Wong"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Company</ion-label>
+                <ion-input text-right type="text" readonly value="BreadTalk"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Email</ion-label>
+                <ion-input text-right type="text" readonly value="alan.wong@breadtalk.com.sg"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Telephone</ion-label>
+                <ion-input text-right type="text" readonly value="(65) 6285 6116"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Price group</ion-label>
+                <ion-input text-right type="text" readonly value="GOLD"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Catalog</ion-label>
+                <ion-input text-right type="text" readonly value="INST"></ion-input>
+            </ion-item>
+        </ion-list>
+        <ion-list *ngSwitchCase="'order'">
+            <ion-list>
+                <ion-list-header>Summary</ion-list-header>
+                <ion-item>
+                    <ion-label>Total</ion-label>
+                    <ion-input class="total" text-right type="text" readonly value="3/$3,301.00"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Overdue</ion-label>
+                    <ion-input class="overdue" text-right type="text" readonly value="2/$1,000.50"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label text-wrap>Not Completed</ion-label>
+                    <ion-input class="not-completed" text-right type="text" readonly value="1/$1,200.00"></ion-input>
+                </ion-item>
+            </ion-list>
+            <ion-list>
+                <ion-list-header>Order List</ion-list-header>
+                <button ion-item (click)="orderSelected(order)" *ngFor="let order of orders">
+                    <ion-grid no-padding>
+                        <ion-row>
+                            <ion-col>
+                                <h2 class="text-primary">{{order.id}}</h2>
+                            </ion-col>
+                            <ion-col>
+                                <h2 text-right>{{order.price | currency : 'USD' : true : '1.2-2'}}</h2>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col>
+                                <h3>Order Date: {{order.order_date | date: 'dd/MM/yyyy' }}</h3>
+                            </ion-col>
+                            <ion-col>
+                                <h3 text-right class="text-primary">{{order.status}}</h3>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col>
+                                <h3>Invoice/Hold No.: {{order.code}}</h3>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </button>
+            </ion-list>
+        </ion-list>
+    </div>
+</ion-content>

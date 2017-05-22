@@ -1,0 +1,86 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Select Customer</ion-title>
+        <ion-buttons end>
+            <button ion-button color="brand-primary" (click)="selectProduct();">NEXT</button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content color="light">
+    <ion-list>
+        <ion-list-header color="light">Customer Information</ion-list-header>
+        <ion-item>
+            <ion-label>Company Name</ion-label>
+            <ion-input text-right type="text" readonly value="BreadTalk"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Code</ion-label>
+            <ion-input text-right type="text" readonly value="11539-030"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Price Group</ion-label>
+            <ion-input text-right type="text" readonly value="DFI"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Currency</ion-label>
+            <ion-input text-right type="text" readonly value="SGD"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Payment Term</ion-label>
+            <ion-input text-right type="text" readonly value="Credit"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Contact Name</ion-label>
+            <ion-input text-right type="text" readonly value="Alan Wong"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Designation</ion-label>
+            <ion-input text-right type="text" readonly value="Purchaser"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Telephone</ion-label>
+            <ion-input text-right type="text" readonly value="(65) 6285-6116"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Email</ion-label>
+            <ion-input text-right type="text" readonly value="alan.wong@breadtalk.com.sg"></ion-input>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-list-header color="light">Credit Information</ion-list-header>
+        <ion-item>
+            <ion-label>Credit Limit</ion-label>
+            <ion-input text-right type="text" readonly value="$10,000.00"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Available Credit</ion-label>
+            <ion-input text-right type="text" readonly value="$8,000.00"></ion-input>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-list-header color="light">Billing Address</ion-list-header>
+        <ion-item>
+            <ion-textarea fz-elastic text-wrap value="30 Tai Seng Street #09-01 Singapore 534013" readonly></ion-textarea>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-list-header color="light">Shipping Address</ion-list-header>
+        <button ion-item text-wrap (click)="openShippingAddressModal();">30 Tai Seng Street #09-01 Singapore 534013</button>
+    </ion-list>
+    <ion-list>
+        <ion-list-header color="light">Order History</ion-list-header>
+        <ion-item>
+            <ion-label>Last Order Date</ion-label>
+            <ion-input text-right type="text" readonly value="12-Apr-2016"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Last Order Amount</ion-label>
+            <ion-input text-right type="text" readonly value="$2,176.90"></ion-input>
+        </ion-item>
+    </ion-list>
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+        <ion-title>Step 02/06</ion-title>
+    </ion-toolbar>
+</ion-footer>

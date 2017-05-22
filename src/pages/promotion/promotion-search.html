@@ -1,0 +1,76 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Advanced Search</ion-title>
+        <ion-buttons end>
+            <button ion-button (click)="dismiss()">
+                Close
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label>Promotion No.</ion-label>
+            <ion-input text-right type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Name</ion-label>
+            <ion-input text-right type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Promotion Type</ion-label>
+            <ion-select text-right>
+                <ion-option value="All" selected="true">All</ion-option>
+                <ion-option value="Other">Other</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label>Customer</ion-label>
+            <ion-select text-right>
+                <ion-option value="All" selected="true">All</ion-option>
+                <ion-option value="Other">Other</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label>Price Group</ion-label>
+            <ion-select text-right>
+                <ion-option value="All" selected="true">All</ion-option>
+                <ion-option value="Other">Other</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label>Valid From (From)</ion-label>
+            <ion-datetime displayFormat="DD/MM/YYYY"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label>Valid From (To)</ion-label>
+            <ion-datetime displayFormat="DD/MM/YYYY"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label>Valid To (From)</ion-label>
+            <ion-datetime displayFormat="DD/MM/YYYY"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label>Valid To (To)</ion-label>
+            <ion-datetime displayFormat="DD/MM/YYYY"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label>Status</ion-label>
+            <ion-select text-right>
+                <ion-option value="All" selected="true">All</ion-option>
+                <ion-option value="Other">Other</ion-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+</ion-content>
+<ion-footer>
+    <div padding-left padding-right>
+        <p>
+            <button ion-button color="brand-primary" block (click)="dismiss()">Search</button>
+        </p>
+        <p>
+            <button ion-button color="brand-primary" outline block (click)="dismiss()">Clear</button>
+        </p>
+    </div>
+</ion-footer>
